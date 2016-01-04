@@ -9,10 +9,10 @@ class CreateFlashCardTest < ActionDispatch::IntegrationTest
     click_link "Add new flash card"
 
     card_data = {
-                  question: "How do you fix this error? NoMethodError: undefined method `pets' for #<Store:0x00000108b755f8>\n
-                            test/models/store_test.rb:7:in `block in <class:StoreTest>'",
-                  answer:   "Set up `has_many :pets` relationship inside of the Store class."
-                }
+      question: "How do you fix this error? NoMethodError: undefined method `pets' for #<Store:0x00000108b755f8>\n
+                 test/models/store_test.rb:7:in `block in <class:StoreTest>'",
+      answer:   "Set up `has_many :pets` relationship inside of the Store class."
+    }
 
     fill_in "Question", with: card_data[:question]
     fill_in "Answer", with: card_data[:answer]
